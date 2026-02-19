@@ -27,7 +27,7 @@ public class Combat {
 
     public int determinerVainqueurRound() {
         if (attaque1.getId() == attaque2.getId()) {
-            // Aucun joueur gagne, égalite
+            // Aucun joueur ne gagne, il y a égalité
             return 0;
         } else if (attaque1.getId() == 1 && attaque2.getId() == 3 ||
                 attaque1.getId() == 2 && attaque2.getId() == 1 ||

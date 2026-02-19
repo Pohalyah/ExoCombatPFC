@@ -1,61 +1,73 @@
-// package fr.afpa;
+package fr.afpa;
 
-// import java.util.Scanner;
+import java.util.Scanner;
 
-// public class Application {
+public class Application {
 
-// public static void main(String[] args) {
-// Scanner sc = new Scanner(System.in);
+    // public static void main(String[] args) {
 
-// Personnage joueur1 = new Guerrier("Jacobus", 100);
-// Personnage joueur2 = new Mage("Narnia", 80);
+    // Scanner scanner = new Scanner(System.in);
 
-// Attaque[] attaqueJ1 = {
-// new Attaque("Poing de feu", 1, 8),
-// new Attaque("Mach Punch", 2, 17),
-// new Attaque("Ultralaser", 3, 25)
-// };
+    // // Création des personnages
+    // Personnage joueur1 = new Guerrier("Guerrier", 100);
+    // Personnage joueur2 = new Mage("Mage", 100);
 
-// Attaque[] attaquesJ2 = {
-// new Attaque("Tempête de vent", 1, 10),
-// new Attaque("Laser glace", 2, 15),
-// new Attaque("Explosion de feu", 3, 21)
-// };
+    // while (joueur1.estVivant() && joueur2.estVivant()) {
 
-// while (joueur1.estVivant() && joueur2.estVivant()) {
-// System.out.println(joueur1.getNom() + " PV : " + joueur1.getPointsDeVie());
-// System.out.println(joueur2.getNom() + " PV : " + joueur2.getPointsDeVie());
+    // System.out.println("\n--- Nouveau Round ---");
 
-// System.out.println("Joueur 1, choisissez une attaque (1-3) :");
-// for (int i = 0; i < attaqueJ1.length; i++) {
-// System.out.println((i + 1) + " : " + attaqueJ1[i].getNom() + " (" +
-// attaqueJ1[i].getPuissance() + ")");
-// }
-// int choix1 = sc.nextInt();
-// Attaque attaque1 = attaqueJ1[choix1 - 1];
+    // // Choix attaque joueur 1
+    // System.out.println("Joueur 1 - Choisissez une attaque (1, 2 ou 3) : ");
+    // int id1 = scanner.nextInt();
 
-// System.out.println("Joueur 2, choisissez une attaque (1-3) :");
-// for (int i = 0; i < attaquesJ2.length; i++) {
-// System.out
-// .println((i + 1) + " : " + attaquesJ2[i].getNom() + " (" +
-// attaquesJ2[i].getPuissance() + ")");
-// }
-// int choix2 = sc.nextInt();
-// Attaque attaque2 = attaquesJ2[choix2 - 1];
+    // // Choix attaque joueur 2
+    // System.out.println("Joueur 2 - Choisissez une attaque (1, 2 ou 3) : ");
+    // int id2 = scanner.nextInt();
 
-// Combat combat = new Combat(joueur1, joueur2, attaque1, attaque2);
-// int vainqueurRound = combat.appliquerResultatRound();
+    // // Définition des puissances de base
+    // int puissance1 = 10;
+    // int puissance2 = 10;
 
-// switch (vainqueurRound) {
-// case 0 -> System.out.println("Égalité !");
-// case 1 -> System.out.println(joueur1.getNom() + " gagne le round !");
-// case 2 -> System.out.println(joueur2.getNom() + " gagne le round !");
-// }
-// }
+    // if (id1 == 2)
+    // puissance1 = 15;
+    // if (id1 == 3)
+    // puissance1 = 20;
 
-// Personnage vainqueur = joueur1.estVivant() ? joueur1 : joueur2;
-// System.out.println("Le vainqueur de la partie est : " + vainqueur.getNom());
+    // if (id2 == 2)
+    // puissance2 = 15;
+    // if (id2 == 3)
+    // puissance2 = 20;
 
-// sc.close();
-// }
-// }
+    // // Création des attaques
+    // Attaque attaque1 = new Attaque("Attaque J1", id1, puissance1, joueur1);
+    // Attaque attaque2 = new Attaque("Attaque J2", id2, puissance2, joueur2);
+
+    // // Calcul des dégâts via polymorphisme
+    // int degats1 = joueur1.calculerDegats(attaque1);
+    // int degats2 = joueur2.calculerDegats(attaque2);
+
+    // // Logique pierre-feuille-ciseaux
+    // if (id1 == id2) {
+    // System.out.println("Egalité !");
+    // } else if ((id1 == 1 && id2 == 3) ||
+    // (id1 == 2 && id2 == 1) ||
+    // (id1 == 3 && id2 == 2)) {
+
+    // System.out.println("Joueur 1 gagne le round !");
+    // joueur2.subirDegats(degats1);
+    // } else {
+    // System.out.println("Joueur 2 gagne le round !");
+    // joueur1.subirDegats(degats2);
+    // }
+
+    // System.out.println("PV Joueur 1 : " + joueur1.getPointsDeVie());
+    // System.out.println("PV Joueur 2 : " + joueur2.getPointsDeVie());
+    // }
+
+    // if (joueur1.estVivant()) {
+    // System.out.println("Joueur 1 remporte la partie !");
+    // } else {
+    // System.out.println("Joueur 2 remporte la partie !");
+    // }
+    // }
+}

@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "MainFX",
+            "request": "launch",
+            "mainClass": "fr.afpa.MainFX",
+            "projectName": "POOExoCombat",
+            "vmArgs": "--module-path \"C:\\Users\\Pohalyah\\Desktop\\JAVAFX\\javafx-sdk-21.0.10\\lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}
